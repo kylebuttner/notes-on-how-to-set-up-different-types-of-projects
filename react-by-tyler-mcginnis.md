@@ -88,7 +88,7 @@ Now we need to include HTML Webpack Plugin. At the top of the webpack.config.js 
 
 ```
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HtmlWebpackPluginConfig = new HTMLWebpackPlugin({
+var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html', //the file we want to transfer to dist
   filename: 'index.html',
   inject: 'body'
@@ -107,7 +107,7 @@ module.exports = {
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
     ]
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig]
 }
 ```
 
